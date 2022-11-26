@@ -1,0 +1,24 @@
+Create School Management System: Students, Teachers, Funds
+
+--Use: money management system for school.
++ Track student total fees
++ Fees already paid
++ Teachers salary
+
+// Class: School
+Teachers,
+Students,
+Total money earned = fees that students paid,
+Total money spent = teachers salary
+
+// Class: Teacher
+id,
+name,
+salary
+
+// Class: Student
+id,
+name,
+grade,
+fees paid,
+fees total
