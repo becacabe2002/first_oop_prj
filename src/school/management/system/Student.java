@@ -26,6 +26,38 @@ public class Student {
 		
 	}
 	
+	
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public int getGrade() {
+		return grade;
+	}
+
+
+
+	public int getFeesPaid() {
+		return feesPaid;
+	}
+
+
+
+	public int getFeesTotal() {
+		return feesTotal;
+	}
+
+
+
 	/**
 	 * Update grade attribute for student object
 	 * @param grade - new grade for student
@@ -34,13 +66,18 @@ public class Student {
 		this.grade = grade;
 	}
 	
+
+
 	/**
 	 * Update remaining fees
 	 * @param fees - recent paid fees
 	 */
-	public void updateFeesPaid(int fees){
+	public void payFees(int fees){
 		this.feesPaid += fees;
-		//this.feesTotal -= fees;
+		School.updateMoneyEarned(fees);
 	}
 	
+	public int getRemainingFees(){
+		return feesTotal - feesPaid;
+	}
 }
